@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.4
+
+### Patch Changes
+
+- 7668478: Add TrainerDTO and Wishlist schemas
+
 ## 0.0.3
 
 ### Patch Changes
