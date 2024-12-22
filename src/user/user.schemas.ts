@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { isValidObjectId, type Types } from 'mongoose';
-import { trainerProfileSchema } from './trainer/trainer.schema.js';
+import { trainerProfileSchema } from './trainer/trainer.schemas.js';
 import { paginationSchema } from '../common/common.schema.js';
 
 const USER_ROLES = ['USER', 'TRAINER', 'ADMIN'] as const;
