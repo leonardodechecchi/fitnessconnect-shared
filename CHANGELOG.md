@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.3
+
+### Patch Changes
+
+- 4c54f1f: Added user and trainer schemas and types
+
 ## 0.0.2
 
 ### Patch Changes
