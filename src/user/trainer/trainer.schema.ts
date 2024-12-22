@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { userDTOSchema } from '../user.schema.js';
 
 export const trainerProfileSchema = z.object({
   specialties: z.array(z.string()),
@@ -13,3 +14,9 @@ export const trainerProfileSchema = z.object({
   }),
   verified: z.boolean(),
 });
+
+export const trainerDTOSchema = userDTOSchema.extend({
+  trainerProfile: trainerProfileSchema,
+});
+
+export type TrainerDTO = z.infer<typeof trainerDTOSchema>;
