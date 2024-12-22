@@ -1,21 +1,23 @@
 {
-    "name": "fitnessconnect-shared",
-    "version": "0.0.1",
-    "license": "MIT",
-    "homepage": "https://github.com/leonardodechecchi/fitnessconnect-shared",
-    "author": "Leonardo De Checchi",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/leonardodechecchi/fitnessconnect-shared.git"
-    },
-    "scripts": {
-        "build": "tsc"
-    },
-    "files": [
-        "dist"
-    ],
-    "type": "module",
-    "devDependencies": {
-        "typescript": "^5.7.2"
-    }
+  "name": "fitnessconnect-shared",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/leonardodechecchi/fitnessconnect-shared",
+  "author": "Leonardo De Checchi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardodechecchi/fitnessconnect-shared.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  }
 }
