@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.5
+
+### Patch Changes
+
+- 2335030: Added auth and wishlist schemas and updated other schemas
+
 ## 0.0.4
 
 ### Patch Changes
