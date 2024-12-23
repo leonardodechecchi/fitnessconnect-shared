@@ -10,7 +10,7 @@ export const paginationSchema = z.object({
   data: z.array(z.any()),
 });
 
-export const paginationParamsSchema = z.object({
+export const paginationParamSchema = z.object({
   limit: z
     .string()
     .default('12')
@@ -30,6 +30,5 @@ export const paginationParamsSchema = z.object({
   orderBy: z.enum(ORDER_BY).default('desc'),
 });
 
-export type OrderBy = (typeof ORDER_BY)[number];
 export type PaginationSchema = z.infer<typeof paginationSchema>;
-export type PaginationParamsSchema = z.infer<typeof paginationParamsSchema>;
+export type PaginationParamSchema = z.infer<typeof paginationParamSchema>;
