@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.6
+
+### Patch Changes
+
+- c823987: Added wishlist items schemas and wishlist schemas refactoring
+
 ## 0.0.5
 
 ### Patch Changes
