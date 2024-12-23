@@ -1,7 +1,10 @@
 import { z } from 'zod';
-import { userDTOSchema } from '../user.schemas.js';
 import { isValidObjectId } from 'mongoose';
-import { paginationParamsSchema } from '../../common/common.schema.js';
+import { userDTOSchema } from '../user.schemas.js';
+import {
+  paginationParamsSchema,
+  paginationSchema,
+} from '../../common/common.schema.js';
 
 export const trainerProfileSchema = z.object({
   specialties: z.array(z.string()),
@@ -25,6 +28,10 @@ export const trainerIdSchema = z.object({
   trainerId: z.string().refine((id) => isValidObjectId(id)),
 });
 
+export const trainerPaginationSchema = paginationSchema.extend({
+  data: z.array(trainerDTOSchema),
+});
+
 export const getTrainersPaginationSchema = paginationParamsSchema.extend({
   searchString: z.string().optional(),
   sortBy: z.enum(['createdAt']).optional(),
@@ -35,3 +42,4 @@ export type TrainerIdSchema = z.infer<typeof trainerIdSchema>;
 export type GetTrainersPaginationSchema = z.infer<
   typeof getTrainersPaginationSchema
 >;
+export type TrainerPaginationSchema = z.infer<typeof trainerPaginationSchema>;

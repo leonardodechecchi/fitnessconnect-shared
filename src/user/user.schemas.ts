@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { isValidObjectId, type Types } from 'mongoose';
 import { trainerProfileSchema } from './trainer/trainer.schemas.js';
 import { paginationSchema } from '../common/common.schema.js';
+import { registerSchema } from '../auth/auth.schemas.js';
 
 const USER_ROLES = ['USER', 'TRAINER', 'ADMIN'] as const;
 
@@ -31,13 +32,7 @@ export const userPaginationSchema = paginationSchema.extend({
   data: z.array(userDTOSchema),
 });
 
-export const createUserSchema = z.object({
-  firstName: z.string().trim().min(2).max(50),
-  lastName: z.string().trim().min(2).max(50),
-  email: z.string().email().min(5).max(100),
-  password: z.string().trim().min(8).max(64),
-  picture: z.string().optional(),
-});
+export const createUserSchema = registerSchema;
 
 export const patchUserSchema = z
   .object({
@@ -62,3 +57,4 @@ export type UserEntity = z.infer<typeof userEntitySchema>;
 export type UserIdSchema = z.infer<typeof userIdSchema>;
 export type CreateUserSchema = z.infer<typeof createUserSchema>;
 export type PatchUserSchema = z.infer<typeof patchUserSchema>;
+export type UserPaginationSchema = z.infer<typeof userPaginationSchema>;

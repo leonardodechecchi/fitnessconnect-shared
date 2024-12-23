@@ -59,3 +59,6 @@ export type CreateWishlistSchema = z.infer<typeof createWishlistSchema>;
 export type UpdateWishlistSchema = z.infer<typeof updateWishlistSchema>;
 export type PatchWishlistSchema = z.infer<typeof patchWishlistSchema>;
 export type GetWishlistsSchema = z.infer<typeof getWishlistsSchema>;
+export type WishlistsPaginationSchema = z.infer<
+  typeof wishlistsPaginationSchema
+>;
