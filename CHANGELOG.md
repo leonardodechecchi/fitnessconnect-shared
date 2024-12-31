@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.8
+
+### Patch Changes
+
+- 479e3d5: DTO string type for ids instead of ObjectId and other changes
+
 ## 0.0.7
 
 ### Patch Changes
