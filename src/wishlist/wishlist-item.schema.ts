@@ -8,14 +8,16 @@ import {
 
 export const wishlistItemDTOSchema = z.object({
   id: z.string(),
-  wishlistId: z.custom<Types.ObjectId>(),
-  trainerId: z.custom<Types.ObjectId>(),
+  wishlistId: z.string(),
+  trainerId: z.string(),
   trainer: userDTOSchema.optional(),
   createdAt: z.date(),
 });
 
 const wishlistItemEntitySchema = wishlistItemDTOSchema.extend({
   _id: z.custom<Types.ObjectId>(),
+  wishlistId: z.custom<Types.ObjectId>(),
+  trainerId: z.custom<Types.ObjectId>(),
   trainer: userEntitySchema.optional(), // ! virtual
   updatedAt: z.date(),
 });
