@@ -1,16 +1,17 @@
 import { z } from 'zod';
 import { isValidObjectId, type Types } from 'mongoose';
-import { userDTOSchema, userEntitySchema } from '../user/user.schemas.js';
+import { userEntitySchema } from '../user/user.schemas.js';
 import {
   paginationParamSchema,
   paginationSchema,
 } from '../common/common.schema.js';
+import { trainerDTOSchema } from '../trainer/trainer.schemas.js';
 
 export const wishlistItemDTOSchema = z.object({
   id: z.string(),
   wishlistId: z.string(),
   trainerId: z.string(),
-  trainer: userDTOSchema.optional(),
+  trainer: trainerDTOSchema.optional(),
   createdAt: z.date(),
 });
 
