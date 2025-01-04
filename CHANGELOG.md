@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.9
+
+### Patch Changes
+
+- d7b0ee0: Fixed typo
+
 ## 0.0.8
 
 ### Patch Changes
