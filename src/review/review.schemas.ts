@@ -18,6 +18,8 @@ export const reviewDTOSchema = z.object({
 
 const reviewEntitySchema = reviewDTOSchema.extend({
   _id: z.custom<Types.ObjectId>(),
+  trainerId: z.custom<Types.ObjectId>(),
+  userId: z.custom<Types.ObjectId>(),
   user: userEntitySchema.optional(), // ! virtual
   updatedAt: z.date(),
 });
