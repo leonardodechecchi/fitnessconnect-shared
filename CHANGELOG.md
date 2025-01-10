@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.14
+
+### Patch Changes
+
+- 315c680: Add Review schemas and DTOs
+
 ## 0.0.13
 
 ### Patch Changes
