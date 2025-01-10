@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.12
+
+### Patch Changes
+
+- 01f687b: Export USER_ROLES constant
+
 ## 0.0.11
 
 ### Patch Changes
