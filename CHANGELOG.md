@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.10
+
+### Patch Changes
+
+- 419c843: Updated exports
+
 ## 0.0.9
 
 ### Patch Changes
