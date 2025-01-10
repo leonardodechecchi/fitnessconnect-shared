@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.16
+
+### Patch Changes
+
+- 58b5779: Switched to objectid in review schema
+
 ## 0.0.15
 
 ### Patch Changes
