@@ -4,7 +4,7 @@ import { trainerProfileSchema } from '../trainer/trainer.schemas.js';
 import { paginationSchema } from '../common/common.schema.js';
 import { registerSchema } from '../auth/auth.schemas.js';
 
-const USER_ROLES = ['USER', 'TRAINER', 'ADMIN'] as const;
+export const USER_ROLES = ['USER', 'TRAINER', 'ADMIN'] as const;
 
 export const userDTOSchema = z.object({
   id: z.string(),
