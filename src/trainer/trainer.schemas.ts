@@ -37,6 +37,7 @@ export const trainerPaginationParamSchema = paginationParamSchema.extend({
   sortBy: z.enum(['createdAt']).optional(),
 });
 
+export type TrainerProfileSchema = z.infer<typeof trainerProfileSchema>;
 export type TrainerDTO = z.infer<typeof trainerDTOSchema>;
 export type TrainerIdSchema = z.infer<typeof trainerIdSchema>;
 export type TrainerPaginationSchema = z.infer<typeof trainerPaginationSchema>;
