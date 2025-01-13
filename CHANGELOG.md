@@ -1,5 +1,11 @@
 # fitnessconnect-shared
 
+## 0.0.17
+
+### Patch Changes
+
+- 3a8be3e: A lot of changes
+
 ## 0.0.16
 
 ### Patch Changes
