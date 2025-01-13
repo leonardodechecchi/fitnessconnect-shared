@@ -1,25 +1,11 @@
 import { z } from 'zod';
 import { isValidObjectId } from 'mongoose';
-import { userDTOSchema } from '../user/user.schema.js';
+import { userDTOSchema } from '../user.schema.js';
 import {
   paginationParamSchema,
   paginationSchema,
-} from '../common/common.schema.js';
-
-export const trainerProfileSchema = z.object({
-  specialties: z.array(z.string()),
-  certifications: z.array(z.string()),
-  address: z.object({
-    fullAddress: z.string(),
-    street: z.string(),
-    postalCode: z.string(),
-    city: z.string(),
-    province: z.string(),
-    region: z.string(),
-    country: z.string(),
-  }),
-  verified: z.boolean(),
-});
+} from '../../common/common.schema.js';
+import { trainerProfileSchema } from '../shared/shared.schema.js';
 
 export const trainerDTOSchema = userDTOSchema.extend({
   trainerProfile: trainerProfileSchema,

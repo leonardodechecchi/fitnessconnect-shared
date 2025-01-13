@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { isValidObjectId, type Types } from 'mongoose';
-import { trainerProfileSchema } from '../trainer/trainer.schema.js';
+import { trainerProfileSchema } from './shared/shared.schema.js';
 import { paginationSchema } from '../common/common.schema.js';
 import { registerSchema } from '../auth/auth.schema.js';
 
