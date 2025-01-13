@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { isValidObjectId, type Types } from 'mongoose';
 import { trainerProfileSchema } from '../trainer/trainer.schemas.js';
 import { paginationSchema } from '../common/common.schema.js';
-import { registerSchema } from '../auth/auth.schemas.js';
+import { registerSchema } from '../auth/auth.schema.js';
 
 export const USER_ROLES = ['USER', 'TRAINER', 'ADMIN'] as const;
 

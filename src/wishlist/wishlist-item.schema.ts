@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { isValidObjectId, type Types } from 'mongoose';
-import { userEntitySchema } from '../user/user.schemas.js';
+import { userEntitySchema } from '../user/user.schema.js';
 import {
   paginationParamSchema,
   paginationSchema,
@@ -31,25 +31,18 @@ export const createWishlistItemSchema = z.object({
   trainerId: z.string().refine((trainerId) => isValidObjectId(trainerId)),
 });
 
-export const getWishlistItemsByTrainerIdsSchema = z.object({
-  trainerIds: z
-    .array(z.custom<Types.ObjectId>((id) => isValidObjectId(id)))
-    .default([]),
-});
-
 export const wishlistItemPaginationSchema = paginationSchema.extend({
   data: z.array(wishlistItemDTOSchema),
 });
 
-export const wishlistItemPaginationParamSchema = paginationParamSchema;
+export const wishlistItemPaginationParamSchema = paginationParamSchema.extend({
+  sortBy: z.enum(['createdAt']).default('createdAt'),
+});
 
 export type WishlistItemDTO = z.infer<typeof wishlistItemDTOSchema>;
 export type WishlistItemEntity = z.infer<typeof wishlistItemEntitySchema>;
 export type WishlistItemIdSchema = z.infer<typeof wishlistItemIdSchema>;
 export type CreateWishlistItemSchema = z.infer<typeof createWishlistItemSchema>;
-export type GetWishlistItemsByTrainerIdsSchema = z.infer<
-  typeof getWishlistItemsByTrainerIdsSchema
->;
 export type WishlistItemPaginationSchema = z.infer<
   typeof wishlistItemPaginationSchema
 >;

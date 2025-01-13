@@ -1,7 +1,5 @@
 import { z } from 'zod';
 
-const ORDER_BY = ['asc', 'desc'] as const;
-
 export const paginationSchema = z.object({
   page: z.number(),
   limit: z.number(),
@@ -27,7 +25,7 @@ export const paginationParamSchema = z.object({
       'Input must be positive integer',
     )
     .transform(Number),
-  orderBy: z.enum(ORDER_BY).default('desc'),
+  orderBy: z.enum(['asc', 'desc']).default('desc'),
 });
 
 export type PaginationSchema = z.infer<typeof paginationSchema>;

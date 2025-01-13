@@ -1,6 +1,6 @@
 import { isValidObjectId, Types } from 'mongoose';
 import { z } from 'zod';
-import { userEntitySchema } from '../user/user.schemas.js';
+import { userEntitySchema } from '../user/user.schema.js';
 import {
   paginationParamSchema,
   paginationSchema,

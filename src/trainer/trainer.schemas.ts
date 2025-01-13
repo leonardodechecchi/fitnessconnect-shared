@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { isValidObjectId } from 'mongoose';
-import { userDTOSchema } from '../user/user.schemas.js';
+import { userDTOSchema } from '../user/user.schema.js';
 import {
   paginationParamSchema,
   paginationSchema,
@@ -10,6 +10,7 @@ export const trainerProfileSchema = z.object({
   specialties: z.array(z.string()),
   certifications: z.array(z.string()),
   address: z.object({
+    fullAddress: z.string(),
     street: z.string(),
     postalCode: z.string(),
     city: z.string(),
