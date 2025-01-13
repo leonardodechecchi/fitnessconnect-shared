@@ -5,7 +5,7 @@ import {
   paginationParamSchema,
   paginationSchema,
 } from '../common/common.schema.js';
-import { trainerDTOSchema } from '../trainer/trainer.schemas.js';
+import { trainerDTOSchema } from '../trainer/trainer.schema.js';
 
 export const wishlistItemDTOSchema = z.object({
   id: z.string(),
